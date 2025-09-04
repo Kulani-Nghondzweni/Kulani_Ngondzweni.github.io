@@ -145,35 +145,80 @@ header.hero {
   font-weight: bold;
 }
 
-/* Projects Section */
+/* Project Section Layout */
 .projects {
-  padding: 4rem 10%;
-  background: #161b22;
+  padding: 3rem 2rem;
+  background: #0d1117; /* matches dark theme */
+  color: #fff;
   text-align: center;
-}
-
-.projects h2 {
-  font-size: 2rem;
-  margin-bottom: 2rem;
 }
 
 .project-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 1.5rem;
+  margin-top: 2rem;
 }
 
 .project-card {
-  background: #0d1117;
+  background: #161b22;
   padding: 1.5rem;
   border-radius: 12px;
-  border: 1px solid #2a2f35;
-  transition: 0.3s;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .project-card:hover {
-  border-color: #ff4b2b;
-  transform: translateY(-5px);
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Modal Background */
+.project-modal {
+  display: none; /* hidden by default */
+  position: fixed;
+  z-index: 1000;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.7);
+  overflow-y: auto;
+  padding: 2rem;
+}
+
+/* Modal Content Box */
+.modal-content {
+  background: #161b22;
+  color: #fff;
+  margin: 5% auto;
+  padding: 2rem;
+  width: 80%;
+  max-width: 600px;
+  border-radius: 12px;
+  border: 1px solid #2a2f35;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+  animation: fadeIn 0.4s ease;
+  text-align: left;
+}
+
+/* Close Button */
+.close {
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  color: #ff4b2b;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.close:hover {
+  color: #fff;
+}
+
+/* Smooth Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 /* Footer */

@@ -81,25 +81,68 @@
 
 
   <section id="projects" class="projects">
-    <h2>Projects</h2>
-    <div class="project-grid">
-      <div class="project-card">
-        <h3>Portfolio Website</h3>
-        <p>Personal site built with HTML, CSS, and JS.</p>
-      </div>
-      <div class="project-card">
-        <h3>Data Pipeline Demo</h3>
-        <p>ETL process from CSV to SQL database.</p>
-      </div>
-      <div class="project-card">
-        <h3>Networking Chat App</h3>
-        <p>Java-based client-server chat application.</p>
-      </div>
+  <h2>Projects</h2>
+  <div class="project-grid">
+    
+    <div class="project-card" onclick="showProject('proj1')">
+      <h3>Personal Portfolio Website</h3>
+      <p>The site you're viewing right now is a personal site built with HTML, CSS, and JS.</p>
     </div>
-  </section>
 
-  <footer>
-    <p>© 2025 Kulani • Built with ❤️ using HTML, CSS & JS</p>
-  </footer>
+    <div class="project-card" onclick="showProject('proj2')">
+      <h3>Data Pipeline Demo</h3>
+      <p>ETL process from CSV to SQL database.</p>
+    </div>
+
+    <div class="project-card" onclick="showProject('proj3')">
+      <h3>Networking Chat App</h3>
+      <p>Java-based client-server chat application.</p>
+    </div>
+  </div>
+
+  
+  <div id="proj1" class="project-modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('proj1')">&times;</span>
+      <h2>Personal Portfolio Website</h2>
+      <p>
+        This portfolio website showcases my skills, projects, and experience.
+        Built with HTML, CSS, and JavaScript, it features a responsive design and
+        interactive elements like smooth navigation, role animations, and project modals.
+        <br><br>
+        Future improvements include adding blog posts, downloadable CV, and backend services.
+      </p>
+      <a href="https://github.com/Kulani-Ngondzweni/Kulani-Ngondzweni.github.io" target="_blank">
+        View on GitHub
+      </a>
+    </div>
+  </div>
+
+  <div id="proj2" class="project-modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('proj2')">&times;</span>
+      <h2>Data Pipeline Demo</h2>
+      <p>
+        A demo ETL process that extracts data from CSV, transforms it using Python,
+        and loads it into a SQL database. Designed as part of my Data Engineering elective.
+      </p>
+    </div>
+  </div>
+
+  <div id="proj3" class="project-modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('proj3')">&times;</span>
+      <h2>Networking Chat App</h2>
+      <p>
+        A client-server chat application built in Java using sockets.
+        Supports multiple clients, real-time messaging, and simple command handling.
+      </p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>© 2025 Kulani • Built with ❤️ using HTML, CSS & JS</p>
+</footer>
 </body>
 </html>
